@@ -1,0 +1,33 @@
+body {
+ background-color: blue;
+}
+
+td input{
+ width:50px;
+ height:40px;
+ margin:2px;
+ font-size:20px;
+ cursor:pointer;
+}
+
+
+#gleich {
+ height:88px;
+}
+
+#null {
+ width:108px;
+}
+
+#myform {
+ width:216px;
+ font-size:20px;
+ margin:6px;
+}
+
+#main {
+ position: absolute;
+ left:50%;
+ top:50%;
+ transform: translateX(-50%) translateY(-50%);
+}

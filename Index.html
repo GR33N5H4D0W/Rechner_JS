@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let operator = "";
+        let a = 0;
+
+        function add(i) {
+            document.getElementById('myform').value = document.getElementById('myform').value + i;
+        }
+
+        function c() {
+            var setValueEmptyString = "";
+            document.getElementById('myform').value = setValueEmptyString;
+
+        }
+
+        // function plus() {
+        //     a = parseFloat(document.getElementById('myform').value);
+        //     c();
+        //     console.log(a);
+        //     operator = "p";
+        // }
+        //
+        // function ergebnis() {
+        //     let b = parseFloat(document.getElementById('myform').value);
+        //     console.log(b);
+        //     c();
+        //     if(operator == "p") {
+        //         document.getElementById('myform').value = a + b;
+        //     }
+        // }
+
+        function sum() {
+            let i = document.getElementById('myform').value;
+            if (i) {
+                document.getElementById('myform').value = eval(document.getElementById('myform').value);
+            }
+        }
+        // function ergebnis() {
+        //     let num = parseFloat(document.getElementById('myform').value);
+        //     if (a !== num) {
+        //         let b = num;
+        //         c();
+        //         if (operator == "p") {
+        //             document.getElementById('myform').value = a + b;
+        //             a = document.getElementById('myform').value;
+        //         }
+        //     } else {
+        //         a = parseFloat(document.getElementById('myform').value);
+        //         console.log(a);
+        //         c();
+        //         operator = "p";
+        //     }
+        // }
+
+
+    </script>
+</head>
+<body>
+<div id="main">
+    <table class="ausgabe">
+        <tr style="background-color: azure;">
+            <td><span id="a"></span></td>
+            <td><span id="o"></span></td>
+            <td><span id="b"></span></td>
+        </tr>
+    </table>
+    <form>
+        <input type="text" id="myform">
+    </form>
+    <table>
+        <tr>
+            <td><input type="button" value="C" onclick="c('C')"></td>
+            <td><input type="button" value="CE" onclick="add('CE')"></td>
+            <td><input type="button" value="/" onclick="add('/')"></td>
+            <td><input type="button" value="*" onclick="add('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="add(7)"></td>
+            <td><input type="button" value="8" onclick="add(8)"></td>
+            <td><input type="button" value="9" onclick="add(9)"></td>
+            <td><input type="button" value="+" onclick="add('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="add(4)"></td>
+            <td><input type="button" value="5" onclick="add(5)"></td>
+            <td><input type="button" value="6" onclick="add(6)"></td>
+            <td><input type="button" value="-" onclick="add('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="add(1)"></td>
+            <td><input type="button" value="2" onclick="add(2)"></td>
+            <td><input type="button" value="3" onclick="add(3)"></td>
+            <td rowspan="2"><input type="button" value="=" id="gleich" onclick="sum()"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="0" id="null" onclick="add(0)"></td>
+            <td><input type="button" value="." onclick="add('.')"></td>
+        </tr>
+
+
+    </table>
+</div>
+
+</body>
+</html>
