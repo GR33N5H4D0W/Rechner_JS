@@ -31,3 +31,8 @@ td input{
  top:50%;
  transform: translateX(-50%) translateY(-50%);
 }
+
+#bg {
+ height: 100vh;
+ background: linear-gradient(to right,black,green,black);
+}
